@@ -1,6 +1,8 @@
 # Thor
 
-Connects to [Odin](https://github.com/zkirill/pdin) via WebSockets and launches a GUI for sending and receiving messages.
+Connects to [Odin](https://github.com/zkirill/odin) via WebSockets and launches a GUI for sending and receiving messages.
+
+This is mostly an experiment for me learning Rust.
 
 ```sh
 $ cargo run
