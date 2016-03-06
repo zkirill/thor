@@ -1,0 +1,10 @@
+[package]
+name = "thor"
+version = "0.1.0"
+authors = ["Kirill Zdornyy <kirill@dineserve.com>"]
+
+[dependencies]
+websocket = "0.15.1"
+conrod = "0.32.0"
+find_folder = "*"
+piston_window = "0.38.0"
