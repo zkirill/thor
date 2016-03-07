@@ -1,8 +1,12 @@
 # Thor
 
-Connects to [Odin](https://github.com/zkirill/odin) via WebSockets and launches a GUI for sending and receiving messages.
+Connects to [Odin](https://github.com/zkirill/odin) via WebSockets and launches a GUI for sending and receiving messages. This is mostly an experiment for me learning Rust.
 
-This is mostly an experiment for me learning Rust.
+Tested on OS X. Testing in progress for FreeBSD (Xorg). Theoretically runs on any architecture where Rust, Cargo, and dependencies in Cargo.toml can be compiled and ran.
+
+Messages are UTF-8 but get rendered by Freetype using font Noto Sans so if you want to see characters in other languages (e.g. Chinese) then you will need to use a different font. See more options for [Noto](https://www.google.com/get/noto/).
+
+![alt tag](https://github.com/zkirill/thor/blob/master/screenshots/osx.png)
 
 ```sh
 $ cargo run
