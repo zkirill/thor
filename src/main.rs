@@ -119,7 +119,7 @@ fn main() {
     });
 
     // Construct the window.
-    let window: PistonWindow = WindowSettings::new("Thor", [1080, 720])
+    let window: PistonWindow = WindowSettings::new("Thor", [1024, 768])
                                    .exit_on_esc(true)
                                    .fullscreen(true)
                                    .build()
