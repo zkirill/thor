@@ -211,7 +211,10 @@ fn set_widgets(ui: &mut UiCell,
         COL,
         LABEL,
         BUTTON,
+        BUTTON2,
+        SUBMIT_BUTTON,
         TEXTBOX,
+        BACKSPACE,
         INSTRUCTIONS_LABEL,
     }
 
@@ -240,13 +243,50 @@ fn set_widgets(ui: &mut UiCell,
         .set(INSTRUCTIONS_LABEL, ui);
 
     Button::new()
-        .w_h(300.0, 50.0)
+        .w_h(44.0, 44.0)
         .mid_left_of(MASTER)
         .rgb(0.4, 0.75, 0.6)
-        .label("Send a message to Odin")
+        .label("A")
         .react(|| {
-            *clicked = true;
-        });
+            let mut n = input.clone();
+            n.push('A');
+            *input = n;
+        })
+        .set(BUTTON, ui);
+
+    Button::new()
+        .w_h(44.0, 44.0)
+        .right_from(BUTTON, 20.0)
+        .rgb(0.4, 0.75, 0.6)
+        .label("B")
+        .react(|| {
+            let mut n = input.clone();
+            n.push('B');
+            *input = n;
+        })
+        .set(BUTTON2, ui);
+
+    Button::new()
+        .w_h(200.0, 44.0)
+        .bottom_left_of(MASTER)
+        .rgb(0.4, 0.75, 0.6)
+        .label("Backspace")
+        .react(|| {
+            let mut n = input.clone();
+            n.pop();
+            *input = n;
+        })
+        .set(BACKSPACE, ui);
+
+    Button::new()
+        .w_h(200.0, 44.0)
+        .bottom_right_of(MASTER)
+        .rgb(0.4, 0.75, 0.6)
+        .label("Submit")
+        .react(|| {
+            *submitted = true;
+        })
+        .set(SUBMIT_BUTTON, ui);
 
     TextBox::new(input)
         .w_h(300.0, 50.0)
