@@ -16,6 +16,25 @@ Messages are UTF-8 and get rendered by Freetype using font Noto Sans. If you wan
 **FreeBSD**
 ![FreeBSD](https://github.com/zkirill/thor/blob/master/screenshots/freebsd.png)
 
+Touchscreen mode in X11
+-----------------------
+
+In order to run in "touchscreen" mode in X11 without a mouse cursor first build a release binary with Cargo:
+
+```sh
+$ cargo build --release
+```
+
+Install X11 if you haven't already. Then edit `~/.xinitrc` and put 
+
+`exec /path/to/release/binary`
+
+Launch with:
+
+`$ startx`.
+
+You can exit at anytime by pressing Esc.
+
 Thank you
 ---------
 
