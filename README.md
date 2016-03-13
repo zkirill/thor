@@ -31,7 +31,7 @@ Install X11 if you haven't already. Then edit `~/.xinitrc` and put
 
 Launch with:
 
-`$ startx`.
+`$ startx`
 
 You can exit at anytime by pressing Esc.
 
